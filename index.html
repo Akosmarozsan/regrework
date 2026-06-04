@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raktárkészlet</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">Raktárkészlet</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Főoldal</a></li>
+        <li class="nav-item"><a class="nav-link" href="eladokepek.html">Eladó képek</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 90px;"></div>
+
+<div class="container py-4">
+
+  <div class="row g-4 mb-5">
+    <div class="col-md-4"><video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep1.mp4"></video></div>
+    <div class="col-md-4"><video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep2.mp4"></video></div>
+    <div class="col-md-4"><video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep3.mp4"></video></div>
+  </div>
+
+  <div class="text-center mb-4">
+    <button id="toggleBtn" class="btn btn-primary px-4 py-2 fw-bold">
+      Mutasd a terméktáblázatot
+    </button>
+  </div>
+
+  <table id="productTable">
+    <thead>
+      <tr><th>ID</th><th class="text-center">Név</th><th>Ár (Ft)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>P-101</td><td class="text-center">Billentyűzet</td><td>9 990</td></tr>
+      <tr><td>P-205</td><td class="text-center">Egér</td><td>4 490</td></tr>
+      <tr><td>P-330</td><td class="text-center">Fejhallgató</td><td>12 990</td></tr>
+      <tr><td>P-412</td><td class="text-center">Webkamera</td><td>15 990</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>P-515</td><td class="text-center">USB hub</td><td>7 990</td></tr>
+    </tfoot>
+  </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

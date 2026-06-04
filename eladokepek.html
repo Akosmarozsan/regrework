@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eladó képek</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">Raktárkészlet</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Főoldal</a></li>
+        <li class="nav-item"><a class="nav-link active" href="eladokepek.html">Eladó képek</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 90px;"></div>
+
+<div class="container py-4">
+  <h2 class="text-center mb-4">Eladó termékek</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card">
+        <video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep4.mp4"></video>
+        <div class="card-body">
+          <h5 class="card-title">Main Character Energy</h5>
+          <p>Ár: 9 990 Ft</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" data-product="Billentyűzet">Vásárlás</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep5.mp4"></video>
+        <div class="card-body">
+          <h5 class="card-title">Slay Queen</h5>
+          <p>Ár: 4 490 Ft</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" data-product="Egér">Vásárlás</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <video controls muted autoplay loop poster="/regrework/media/sigarda.png"><source src="/regrework/media/kep6.mp4"></video>
+        <div class="card-body">
+          <h5 class="card-title">Soft Girl Era</h5>
+          <p>Ár: 12 990 Ft</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" data-product="Fejhallgató">Vásárlás</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BUY MODAL -->
+<div class="modal fade" id="buyModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Fizetés</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p id="productName" class="fw-bold"></p>
+
+        <label class="form-label">Kártyaszám</label>
+        <input type="text" class="form-control mb-2" placeholder="1234 5678 9012 3456"
+               inputmode="numeric" pattern="[0-9]*"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+        <label class="form-label">Lejárat</label>
+        <input type="text" class="form-control mb-2" placeholder="MMYY"
+               inputmode="numeric" pattern="[0-9]*"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+        <label class="form-label">CVC</label>
+        <input type="text" class="form-control mb-2" placeholder="123"
+               inputmode="numeric" pattern="[0-9]*"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+        <button class="btn btn-success" onclick="alert('Sikeres vásárlás! (DEMO)')">Fizetés</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
